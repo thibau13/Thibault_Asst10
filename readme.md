@@ -42,9 +42,9 @@ Next, we need to generate a controller that will house the calendar
 processing and associated view.  For now, we simply need an index action
 in the controller.
 
-`rails g controller calendar index`
+`rails g controller home_page index`
 
-Next, we need to edit the index action of the CalendarController class
+Next, we need to edit the index action of the HomePageController class
 to make it grab all the events for use in the calendar display.  Even
 though we will not make use of this feature yet, it is required to
 display the calendar form in the view:
@@ -57,13 +57,13 @@ end
 
 We also need to incorporate a routing configuration so we can view the
 calendar: the most sensible thing to do is to set the index action for
-the CalendarController class as the default home page.  We can edit the
+the HomePageController class as the default home page.  We can edit the
 config/routes.rb file to do so:
 
 `root 'calendar#index'`
 
 Finally, we need to edit the index.html.erb view for the
-CalendarController to display the calendar.
+HomePageController to display the calendar.
 
 The calendar is displayed through the addition of the a `calendar_for`
 method that has been included as part of the newly installed calendar
@@ -94,7 +94,7 @@ nicer.  Feel free to modify the styling as desired: the stylesheets are
 located in the app/assets/stylesheets directory under the appropriate
 file names.
 
-We will need to go back into the index action in the CalendarController
+We will need to go back into the index action in the HomePageController
 and add some code to display the month and year properly:
 
 ```
