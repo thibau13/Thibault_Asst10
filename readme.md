@@ -60,7 +60,7 @@ calendar: the most sensible thing to do is to set the index action for
 the HomePageController class as the default home page.  We can edit the
 config/routes.rb file to do so:
 
-`root 'calendar#index'`
+`root 'home_page#index'`
 
 Finally, we need to edit the index.html.erb view for the
 HomePageController to display the calendar.
