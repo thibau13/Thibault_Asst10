@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+#Create a new repository on Github
+#
+git init
+git add .
+git commit -m "first commit"
+git remote rm origin
+git remote add origin https://github.com/thibau13/Thibault_Asst10.git
+git push -u origin master
